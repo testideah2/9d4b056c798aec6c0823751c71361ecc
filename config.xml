@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
         id          = "en.ontheworldmap.com"
         versionCode = "10"
-        version     = "1.0.0">
+        version     = "1.1.0">
 
-    <name>ТЕСТ. ontheworldmap.com</name>
+    <name>ontheworldmap.com</name>
 
     <description>
         Ontheworldmap.com - is a collection of countries, regions, cities and the world’s resorts maps, which will be of use for you while travelling or for educational needs. We have done our best to collect the highest quality, the most informative and useful maps that can be used for private non-commercial purposes, for example, for printing before setting on a tourist or business trip in order not to get lost in a strange city or country.
@@ -29,6 +31,12 @@
 
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashScreenSpinnerColor" value="#92B14A" />
+    
+    <platform name="android">
+      <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+          <application android:usesCleartextTraffic="true" />
+      </edit-config>
+    </platform>
 
 
     <platform name="android">
